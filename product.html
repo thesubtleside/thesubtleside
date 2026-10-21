@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Couple miniature – The Subtle Side</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="index.html"><span class="logo">TSS</span><b>The Subtle Side</b></a>
+  <nav class="main" aria-label="Main">
+    <a href="index.html#shop">Shop</a>
+    <a href="index.html#custom">Custom order</a>
+  </nav>
+</header>
+
+<div class="wrap crumb"><a href="index.html">Home</a> / <a href="index.html#shop">Clay miniatures</a> / Couple miniature</div>
+
+<main id="pdp" class="pdp" data-product="Couple miniature">
+  <div class="gallery">
+    <div class="ph pink main">[Main product photo]</div>
+    <div class="thumbs"><div class="ph neutral"></div><div class="ph neutral"></div><div class="ph neutral"></div><div class="ph neutral"></div></div>
+  </div>
+
+  <div class="info">
+    <div>
+      <h1>Couple miniature</h1>
+      <div class="price">From ₹[PRICE]</div>
+      <p style="color:var(--muted);margin:12px 0 0">Two tiny clay figures of you, sculpted from your photos, down to the outfits and the little details. Comes on a wooden base, gift-boxed.</p>
+    </div>
+
+    <fieldset>
+      <legend>Size</legend>
+      <div class="pills">
+        <button type="button" class="pill" data-size="Small · 3 in" aria-pressed="false">Small · 3 in</button>
+        <button type="button" class="pill" data-size="Medium · 4 in" aria-pressed="true">Medium · 4 in</button>
+        <button type="button" class="pill" data-size="Large · 5 in" aria-pressed="false">Large · 5 in</button>
+      </div>
+    </fieldset>
+
+    <div>
+      <div class="lbl">Number of figures</div>
+      <div class="stepper">
+        <button type="button" id="less" aria-label="Fewer figures">−</button>
+        <output id="figures">2</output>
+        <button type="button" id="more" aria-label="More figures">+</button>
+      </div>
+      <div class="note" style="margin-top:6px">+₹[X] for each extra person or pet</div>
+    </div>
+
+    <fieldset>
+      <legend>Add-ons</legend>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <label class="addon"><input type="checkbox" value="Names and date on base" checked><span>Names and date on the base</span><span class="p">+₹[X]</span></label>
+        <label class="addon"><input type="checkbox" value="Add a pet"><span>Add a pet</span><span class="p">+₹[X]</span></label>
+        <label class="addon"><input type="checkbox" value="Glass display box"><span>Premium glass display box</span><span class="p">+₹[X]</span></label>
+      </div>
+    </fieldset>
+
+    <label class="f" style="font-weight:800;font-size:17px">Notes for the artist
+      <textarea id="notes" rows="3" placeholder="Outfits, hairstyles, props, names for the base…"></textarea>
+    </label>
+
+    <div class="summary"><b>Your selection:</b> <span id="summary"></span></div>
+
+    <button type="button" id="order" class="btn block" style="min-height:58px;font-size:18px">Order on WhatsApp</button>
+    <a data-pay class="btn ghost block" href="#">Already confirmed? Pay online</a>
+    <div class="perks"><span>Ships in [X–Y] working days</span><span>UPI, cards and netbanking</span><span>Progress photos on WhatsApp</span></div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div style="flex:1 1 280px"><div class="display" style="font-weight:800;font-size:24px;color:#fff">The Subtle Side</div></div>
+      <div><span class="t">Help</span><a href="policies.html#shipping">Shipping &amp; delivery</a><a href="policies.html#refunds">Refunds &amp; cancellations</a><a href="policies.html#terms">Terms &amp; privacy</a></div>
+      <div><span class="t">Say hello</span><a href="https://www.instagram.com/thesubtle.side/">Instagram @thesubtle.side</a><a data-wa-number href="#">WhatsApp</a></div>
+    </div>
+    <div class="copy">© 2026 The Subtle Side · Shipping pan-India</div>
+  </div>
+</footer>
+
+</body>
+</html>
