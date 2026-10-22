@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help me choose – The Subtle Side</title>
+<meta name="description" content="No idea what to gift? Tell us about the occasion and the person, and we'll suggest handmade clay gifts made just for them.">
+<link rel="icon" href="images/logo/tss-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="products.js" defer></script>
+<script src="site.js" defer></script>
+</head>
+<body>
+
+<div class="bar">Free gift ideas · No obligation to order</div>
+
+<header class="site">
+  <a class="brand" href="index.html"><img class="logo-img" src="images/logo/tss-logo.png" alt=""><b>The Subtle Side</b></a>
+  <nav class="main" aria-label="Main">
+    <a href="shop.html">Shop</a>
+    <a href="custom.html">Make it yours</a>
+    <a href="help.html" aria-current="page">Help me choose</a>
+    <a href="business.html">For businesses</a>
+    <a href="index.html#about">About us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="pad" style="padding-top:32px">
+    <div class="wrap split">
+      <div class="l">
+        <span class="chip">03 · You have no idea yet</span>
+        <h1 class="sec" style="font-size:clamp(40px,5.5vw,64px);line-height:1.02;margin:18px 0 18px">No idea what to gift? That's what we're here for.</h1>
+        <p class="sub" style="margin-bottom:28px">Tell us about the occasion and the person. We'll message you on WhatsApp with a few gift ideas made just for them, with prices.</p>
+
+        <div class="prompts">
+          <div class="lbl">Stuck? Think about:</div>
+          <ul>
+            <li>Their favourite food or the dish they always order</li>
+            <li>A pet, a hobby or a sport they love</li>
+            <li>A place that matters to them</li>
+            <li>An inside joke, a nickname or a shared memory</li>
+          </ul>
+        </div>
+
+        <div class="help-photos" aria-hidden="true">
+          <img src="images/food/paan-charm.jpg" alt="" loading="lazy">
+          <img src="images/jewellery/penguin-studs.jpg" alt="" loading="lazy">
+          <img src="images/accessories/chess-bookmark.jpg" alt="" loading="lazy">
+        </div>
+      </div>
+      <div class="r">
+        <form id="help-form" class="panel" method="POST" enctype="multipart/form-data" data-endpoint>
+          <input type="hidden" name="_subject" value="New 'Help me choose' request – The Subtle Side website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="" data-next>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <label class="f">What's the occasion?
+            <select name="Occasion" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>Birthday</option>
+              <option>Anniversary</option>
+              <option>Wedding</option>
+              <option>Rakhi</option>
+              <option>Diwali</option>
+              <option>Christmas</option>
+              <option>Valentine's Day</option>
+              <option>Farewell or retirement</option>
+              <option>Graduation</option>
+              <option>Housewarming</option>
+              <option>Just because</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label class="f">When do you need it?<input name="Needed by" type="date" required></label>
+          <label class="f full">What do they love?<textarea name="What they love" rows="6" required placeholder="e.g. My sister loves her beagle, can't live without momos and just moved to Bangalore."></textarea></label>
+          <label class="f">Your name<input name="Name" type="text" required autocomplete="name"></label>
+          <label class="f">Your WhatsApp number<input name="WhatsApp" type="tel" required placeholder="+91" autocomplete="tel"></label>
+          <label class="f full">Email (optional)<input name="email" type="email" autocomplete="email"></label>
+          <button class="btn block full" type="submit">Get my gift ideas</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="white pad">
+    <div class="wrap nudge">
+      <p>Already have something in mind? <a href="custom.html">Make it yours</a>. Want to browse first? <a href="shop.html">Visit the shop</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div style="flex:1 1 280px"><div class="display" style="font-weight:800;font-size:24px;color:#fff">The Subtle Side</div><span style="max-width:340px">Where memories come alive in clay. Handmade in India since 2020.</span></div>
+      <div><span class="t">Find a gift</span><a href="shop.html">Shop</a><a href="custom.html">Make it yours</a><a href="help.html">Help me choose</a><a href="business.html">For businesses</a></div>
+      <div><span class="t">Help</span><a href="policies.html#shipping">Shipping &amp; delivery</a><a href="policies.html#refunds">Refunds &amp; cancellations</a><a href="policies.html#terms">Terms &amp; privacy</a></div>
+      <div><span class="t">Say hello</span><a href="https://www.instagram.com/thesubtle.side/">Instagram @thesubtle.side</a><a href="mailto:thesubtleside@gmail.com">thesubtleside@gmail.com</a></div>
+    </div>
+    <div class="copy">© 2026 The Subtle Side · Shipping pan-India</div>
+  </div>
+</footer>
+
+<a href="#" class="to-top" aria-label="Back to top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></a>
+
+</body>
+</html>

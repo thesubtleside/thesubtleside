@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For businesses – The Subtle Side</title>
+<meta name="description" content="Handmade clay corporate gifts: branded keychains, fridge magnets, lapel pins and welcome charms for teams, clients, events, hotels and resorts.">
+<link rel="icon" href="images/logo/tss-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="products.js" defer></script>
+<script src="site.js" defer></script>
+</head>
+<body>
+
+<div class="bar">Corporate gifting, hospitality, reselling and group workshops</div>
+
+<header class="site">
+  <a class="brand" href="index.html"><img class="logo-img" src="images/logo/tss-logo.png" alt=""><b>The Subtle Side</b></a>
+  <nav class="main" aria-label="Main">
+    <a href="shop.html">Shop</a>
+    <a href="custom.html">Make it yours</a>
+    <a href="help.html">Help me choose</a>
+    <a href="business.html" aria-current="page">For businesses</a>
+    <a href="index.html#about">About us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap page-hero">
+    <span class="chip">For businesses</span>
+    <h1>Gifts people actually keep</h1>
+    <p class="sub">Clay gifts that carry your brand or your story: your logo as a keychain, a milestone as a fridge magnet, a welcome charm that reflects your place. Made by hand, in the quantities you need.</p>
+  </section>
+
+  <section class="wrap" style="padding-bottom:72px">
+    <h2 class="sec" style="font-size:32px;margin-bottom:24px">Work we've done</h2>
+    <div id="business-grid" class="pgrid"></div>
+  </section>
+
+  <section class="white pad">
+    <div class="wrap">
+      <h2 class="sec" style="font-size:32px;margin-bottom:24px">What we can do</h2>
+      <div class="grid values" style="margin-top:0">
+        <div class="value"><h3>Branded gifts</h3><p>Your logo, mascot or product as keychains, magnets and lapel pins, for employees, clients and partners.</p></div>
+        <div class="value"><h3>Hotels &amp; resorts</h3><p>Welcome charms designed around your place, your region or your story.</p></div>
+        <div class="value"><h3>Events &amp; milestones</h3><p>Giveaways for launches, offsites and anniversaries that people take home and keep.</p></div>
+        <div class="value"><h3>Reselling &amp; workshops</h3><p>Stock our pieces in your store, or book a hands-on clay workshop for your team.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="enquire" class="pad">
+    <div class="wrap split">
+      <div class="l">
+        <h2 class="sec" style="line-height:1.05;margin-bottom:16px">Tell us what you need</h2>
+        <p class="sub" style="margin-bottom:24px">Share a few details and we'll get back to you with ideas, samples and bulk pricing.</p>
+        <div class="ticks">
+          <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6B3F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Bulk pricing</div>
+          <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6B3F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Designs approved by you before we make them</div>
+          <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E6B3F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Delivered anywhere in India</div>
+        </div>
+      </div>
+      <div class="r">
+        <form id="business-form" class="panel" method="POST" enctype="multipart/form-data" data-endpoint>
+          <input type="hidden" name="_subject" value="New business enquiry – The Subtle Side website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="" data-next>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <label class="f full">What are you looking for?
+            <select name="Enquiry type">
+              <option>Gifts for employees or clients</option>
+              <option>Event giveaways</option>
+              <option>Hotel or resort welcome charms</option>
+              <option>Reselling our products</option>
+              <option>A clay workshop for a group</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label class="f">Roughly how many?
+            <select name="Quantity">
+              <option>Under 25</option>
+              <option>25–50</option>
+              <option>50–100</option>
+              <option>100–250</option>
+              <option>250+</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label class="f">Needed by (optional)<input name="Needed by" type="date"></label>
+          <label class="f full">Tell us more<textarea name="Details" rows="4" required placeholder="What you have in mind, the occasion, your budget per piece…"></textarea></label>
+          <label class="f full">Logo or reference images (optional, up to 10 MB)<input name="attachment" type="file" accept="image/*,.pdf" multiple data-files></label>
+          <label class="f">Company or organisation<input name="Company" type="text" required autocomplete="organization"></label>
+          <label class="f">Your name<input name="Name" type="text" required autocomplete="name"></label>
+          <label class="f">Work email<input name="email" type="email" required autocomplete="email"></label>
+          <label class="f">WhatsApp number<input name="WhatsApp" type="tel" required placeholder="+91" autocomplete="tel"></label>
+          <button class="btn block full" type="submit">Send enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div style="flex:1 1 280px"><div class="display" style="font-weight:800;font-size:24px;color:#fff">The Subtle Side</div><span style="max-width:340px">Where memories come alive in clay. Handmade in India since 2020.</span></div>
+      <div><span class="t">Find a gift</span><a href="shop.html">Shop</a><a href="custom.html">Make it yours</a><a href="help.html">Help me choose</a><a href="business.html">For businesses</a></div>
+      <div><span class="t">Help</span><a href="policies.html#shipping">Shipping &amp; delivery</a><a href="policies.html#refunds">Refunds &amp; cancellations</a><a href="policies.html#terms">Terms &amp; privacy</a></div>
+      <div><span class="t">Say hello</span><a href="https://www.instagram.com/thesubtle.side/">Instagram @thesubtle.side</a><a href="mailto:thesubtleside@gmail.com">thesubtleside@gmail.com</a></div>
+    </div>
+    <div class="copy">© 2026 The Subtle Side · Shipping pan-India</div>
+  </div>
+</footer>
+
+<a href="#" class="to-top" aria-label="Back to top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></a>
+
+</body>
+</html>
