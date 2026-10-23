@@ -120,7 +120,32 @@ function setupHowTabs() {
   });
 }
 
+/* ---------- Menu: phone toggle + Shop dropdown ---------- */
+function setupMenu() {
+  var toggle = document.querySelector(".menu-toggle");
+  var menu = document.getElementById("site-menu");
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () {
+      var open = menu.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+  var sub = document.querySelector(".sub-toggle");
+  var list = document.getElementById("shop-sub");
+  if (!sub || !list) return;
+  function set(open) { list.classList.toggle("open", open); sub.setAttribute("aria-expanded", open ? "true" : "false"); }
+  sub.addEventListener("click", function (e) { e.stopPropagation(); set(!list.classList.contains("open")); });
+  document.addEventListener("click", function (e) { if (!e.target.closest(".has-sub")) set(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && list.classList.contains("open")) { set(false); sub.focus(); } });
+  var hub = document.querySelector(".has-sub");
+  if (window.matchMedia("(hover: hover) and (min-width: 981px)").matches) {
+    hub.addEventListener("mouseenter", function () { set(true); });
+    hub.addEventListener("mouseleave", function () { set(false); });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  setupMenu();
   setupToTop();
   setupHowTabs();
   document.querySelectorAll("[data-pay]").forEach(function (el) {

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works – The Subtle Side</title>
+<meta name="description" content="How to order handmade clay gifts from The Subtle Side in three simple steps.">
+<link rel="icon" href="images/logo/tss-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+
+<header class="site">
+  <a class="brand" href="index.html"><img class="logo-img" src="images/logo/tss-logo.png" alt=""><b>The Subtle Side</b></a>
+  <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="menu-label">Menu</span></button>
+  <nav class="main" aria-label="Main">
+    <ul id="site-menu" class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="shop-sub">Shop <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <ul id="shop-sub" class="sub">
+          <li><a href="shop.html">All products</a></li>
+          <li><a href="custom.html">Make it yours</a></li>
+          <li><a href="help.html">No idea what to gift?</a></li>
+        </ul>
+      </li>
+      <li><a href="how.html" aria-current="page">How it works</a></li>
+      <li><a href="business.html">For businesses</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section id="how" class="pad" style="padding-top:24px">
+  <div class="wrap">
+    <span class="chip">New here? Start here</span>
+    <h1 class="sec" style="font-size:clamp(40px,6vw,64px);margin:16px 0 28px">How it works</h1>
+
+    <div class="how-tabs" role="tablist" aria-label="Ways to order">
+      <button type="button" class="how-tab" role="tab" id="tab-shop" aria-controls="how-shop" aria-selected="true">
+        <b>I know what I want</b><span>Shop</span>
+      </button>
+      <button type="button" class="how-tab" role="tab" id="tab-custom" aria-controls="how-custom" aria-selected="false" tabindex="-1">
+        <b>I have an idea or photos</b><span>Make it yours</span>
+      </button>
+      <button type="button" class="how-tab" role="tab" id="tab-help" aria-controls="how-help" aria-selected="false" tabindex="-1">
+        <b>I have no idea what to get</b><span>No idea what to gift?</span>
+      </button>
+    </div>
+
+    <!-- SHOP -->
+    <div class="how-panel" role="tabpanel" id="how-shop" aria-labelledby="tab-shop">
+      <ol class="how-steps">
+        <li class="how-step">
+          <div class="mock"><div class="mock-nav"><span>Home</span><span class="hl">Shop ▾</span><span>FAQs</span></div></div>
+          <span class="how-num">1</span>
+          <h3>Tap <q>Shop</q> in the menu</h3>
+          <p>See everything with prices.</p>
+        </li>
+        <li class="how-step">
+          <div class="mock"><div class="mock-card"><img src="images/jewellery/strawberry-earrings.jpg" alt=""><div><b>Strawberry earrings</b><i>₹250</i><span class="mock-btn hl">Order</span></div></div></div>
+          <span class="how-num">2</span>
+          <h3>Tap <q>Order</q> on a piece</h3>
+          <p>A small form opens. Nothing is paid yet.</p>
+        </li>
+        <li class="how-step">
+          <div class="mock"><div class="mock-form"><span class="mock-line">Your name &amp; WhatsApp</span><span class="mock-line short">Names, colours…</span><span class="mock-btn wide hl">Send my order</span></div></div>
+          <span class="how-num">3</span>
+          <h3>Tap <q>Send my order</q></h3>
+          <p>Add any names or colours you want.</p>
+        </li>
+      </ol>
+      <a class="btn" href="shop.html">Go to the Shop</a>
+    </div>
+
+    <!-- MAKE IT YOURS -->
+    <div class="how-panel" role="tabpanel" id="how-custom" aria-labelledby="tab-custom" hidden>
+      <ol class="how-steps">
+        <li class="how-step">
+          <div class="mock"><div class="mock-card"><img src="images/portraits/couple-portrait-1.jpg" alt=""><div><b>3D portraits</b><i>From ₹1,150</i><span class="mock-btn hl">Start with this</span></div></div></div>
+          <span class="how-num">1</span>
+          <h3>Open <q>Make it yours</q></h3>
+          <p>Pick a portrait, pet, vehicle or more.</p>
+        </li>
+        <li class="how-step">
+          <div class="mock"><div class="mock-upload hl"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 20h16"/></svg><span>Add your photos</span></div></div>
+          <span class="how-num">2</span>
+          <h3>Add photos and details</h3>
+          <p>Clear, front-facing photos work best.</p>
+        </li>
+        <li class="how-step">
+          <div class="mock"><div class="mock-chat"><span class="bubble">Here are 2 ideas for your portrait, ₹1,350 for 3 figures. Shall we go ahead?</span></div></div>
+          <span class="how-num">3</span>
+          <h3>Tap <q>Send my idea</q></h3>
+          <p>We reply on WhatsApp with ideas and a price.</p>
+        </li>
+      </ol>
+      <a class="btn" href="custom.html">Share your idea</a>
+    </div>
+
+    <!-- HELP ME CHOOSE -->
+    <div class="how-panel" role="tabpanel" id="how-help" aria-labelledby="tab-help" hidden>
+      <ol class="how-steps">
+        <li class="how-step">
+          <div class="mock"><div class="mock-form"><span class="mock-select hl">Birthday <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span><span class="mock-line short">Needed by</span></div></div>
+          <span class="how-num">1</span>
+          <h3>Open <q>No idea what to gift?</q></h3>
+          <p>Pick the occasion and the date.</p>
+        </li>
+        <li class="how-step">
+          <div class="mock"><div class="mock-form"><span class="mock-text hl">Loves her beagle, can't live without momos</span></div></div>
+          <span class="how-num">2</span>
+          <h3>Tell us what they love</h3>
+          <p>Food, pets, hobbies, places…</p>
+        </li>
+        <li class="how-step">
+          <div class="mock"><div class="mock-chat"><span class="bubble">How about a mini beagle figurine, or momo earrings for ₹350?</span></div></div>
+          <span class="how-num">3</span>
+          <h3>Tap <q>Get my gift ideas</q></h3>
+          <p>We reply on WhatsApp with ideas and prices.</p>
+        </li>
+      </ol>
+      <a class="btn" href="help.html">Get gift ideas</a>
+    </div>
+
+    <p class="nudge-line">Still have questions? <a href="faq.html">Read the FAQs</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div style="flex:1 1 280px"><div class="display" style="font-weight:800;font-size:24px;color:#fff">The Subtle Side</div><span style="max-width:340px">Where memories come alive in clay. Handmade in India since 2020.</span></div>
+      <div><span class="t">Find a gift</span><a href="shop.html">All products</a><a href="custom.html">Make it yours</a><a href="help.html">No idea what to gift?</a><a href="business.html">For businesses</a></div>
+      <div><span class="t">Help</span><a href="how.html">How it works</a><a href="faq.html">FAQs</a><a href="policies.html#shipping">Shipping &amp; delivery</a><a href="policies.html#refunds">Refunds &amp; cancellations</a><a href="policies.html#terms">Terms &amp; privacy</a></div>
+      <div><span class="t">Say hello</span><a href="about.html">About us</a><a href="https://www.instagram.com/thesubtle.side/">Instagram @thesubtle.side</a><a href="mailto:thesubtleside@gmail.com">thesubtleside@gmail.com</a></div>
+    </div>
+    <div class="copy">© 2026 The Subtle Side · Shipping pan-India</div>
+  </div>
+</footer>
+
+<a href="#" class="to-top" aria-label="Back to top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></a>
+
+</body>
+</html>

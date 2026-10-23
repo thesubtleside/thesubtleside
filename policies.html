@@ -13,31 +13,53 @@
 <body>
 <header class="site">
   <a class="brand" href="index.html"><img class="logo-img" src="images/logo/tss-logo.png" alt=""><b>The Subtle Side</b></a>
+  <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="menu-label">Menu</span></button>
   <nav class="main" aria-label="Main">
-    <a href="shop.html">Shop</a>
-    <a href="custom.html">Make it yours</a>
-    <a href="help.html">Help me choose</a>
-    <a href="business.html">For businesses</a>
-    <a href="index.html#about">About us</a>
+    <ul id="site-menu" class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li class="has-sub">
+        <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="shop-sub">Shop <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <ul id="shop-sub" class="sub">
+          <li><a href="shop.html">All products</a></li>
+          <li><a href="custom.html">Make it yours</a></li>
+          <li><a href="help.html">No idea what to gift?</a></li>
+        </ul>
+      </li>
+      <li><a href="how.html">How it works</a></li>
+      <li><a href="business.html">For businesses</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+    </ul>
   </nav>
 </header>
 
-<!-- Fill in every [BRACKET] before applying for Razorpay. Payment gateways check that these pages exist. -->
 <main class="wrap" style="max-width:780px;padding-bottom:80px">
   <h1 class="sec" style="font-size:44px">Policies</h1>
 
   <h2 id="shipping">Shipping &amp; delivery</h2>
-  <p>Every piece is made to order. Making takes [X] working days after you approve the sketch, and shipping within India takes a further [Y] working days. We ship pan-India via a trusted courier and share tracking with you.</p>
+  <p>Every piece is made to order. Making takes a minimum of 5 working days, and shipping within India takes a further 3 working days. We ship pan-India via a trusted courier and share tracking with you.</p>
 
   <h2 id="refunds">Refunds &amp; cancellations</h2>
-  <p>Because each piece is personalised, orders can be cancelled for a full refund only before we start sculpting. [Describe what happens if a piece arrives damaged, e.g. send a video of the unboxing within 48 hours and we will remake it.] Approved refunds are processed to the original payment method within [5–7] working days.</p>
+  <p>Because each piece is personalised, orders can be cancelled for a full refund only before we start sculpting.</p>
 
   <h2 id="terms">Terms &amp; privacy</h2>
-  <p>[Business name], [address]. By placing an order you confirm you have the right to share the photos you send. We use your photos and contact details only to make and deliver your order, and we post finished pieces on Instagram only with your permission.</p>
+  <p>By placing an order you confirm you have the right to share the photos you send. We use your photos and contact details only to make and deliver your order, and we post finished pieces on Instagram only with your permission.</p>
 
   <h2 id="contact">Contact</h2>
   <p>Email: <a href="mailto:thesubtleside@gmail.com">thesubtleside@gmail.com</a><br>Instagram: <a href="https://www.instagram.com/thesubtle.side/">@thesubtle.side</a></p>
 </main>
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div style="flex:1 1 280px"><div class="display" style="font-weight:800;font-size:24px;color:#fff">The Subtle Side</div><span style="max-width:340px">Where memories come alive in clay. Handmade in India since 2020.</span></div>
+      <div><span class="t">Find a gift</span><a href="shop.html">All products</a><a href="custom.html">Make it yours</a><a href="help.html">No idea what to gift?</a><a href="business.html">For businesses</a></div>
+      <div><span class="t">Help</span><a href="how.html">How it works</a><a href="faq.html">FAQs</a><a href="policies.html#shipping">Shipping &amp; delivery</a><a href="policies.html#refunds">Refunds &amp; cancellations</a><a href="policies.html#terms">Terms &amp; privacy</a></div>
+      <div><span class="t">Say hello</span><a href="about.html">About us</a><a href="https://www.instagram.com/thesubtle.side/">Instagram @thesubtle.side</a><a href="mailto:thesubtleside@gmail.com">thesubtleside@gmail.com</a></div>
+    </div>
+    <div class="copy">© 2026 The Subtle Side · Shipping pan-India</div>
+  </div>
+</footer>
+
 <a href="#" class="to-top" aria-label="Back to top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></a>
 
 </body>
