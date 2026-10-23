@@ -87,8 +87,6 @@ function setupForms() {
       }
       var msg = buildMessage(form);
       try { sessionStorage.setItem("tss-msg", msg); } catch (err) {}
-      copyText(msg).catch(function () {});
-      window.open(igLink(msg), "_blank", "noopener");
       var btn = form.querySelector("button[type=submit]");
       if (btn) { btn.disabled = true; btn.lastChild.textContent = "Sending…"; }
     });
@@ -100,7 +98,8 @@ function setupForms() {
     var saved = null;
     try { saved = sessionStorage.getItem("tss-msg"); } catch (err) {}
     if (saved) {
-      again.href = igLink(saved);
+      again.href = igLink("");
+      again.addEventListener("click", function () { copyText(saved).catch(function () {}); });
       var copyBtn = document.getElementById("copy-again");
       copyBtn.hidden = false;
       copyBtn.addEventListener("click", function () {
