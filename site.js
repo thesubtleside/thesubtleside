@@ -87,6 +87,8 @@ function setupForms() {
       }
       var msg = buildMessage(form);
       try { sessionStorage.setItem("tss-msg", msg); } catch (err) {}
+      copyText(msg).catch(function () {});
+      window.open(igLink(""), "_blank", "noopener");
       var btn = form.querySelector("button[type=submit]");
       if (btn) { btn.disabled = true; btn.lastChild.textContent = "Sending…"; }
     });
