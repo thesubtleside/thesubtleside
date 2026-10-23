@@ -7,6 +7,7 @@
    PAY_LINK: optional Razorpay Payment Page link (leave "" to hide any Pay button)
    ============================================================ */
 var CONFIG = {
+  INSTAGRAM: "thesubtle.side",
   FORM_ENDPOINT: "https://formsubmit.co/thesubtleside@gmail.com",
   PAY_LINK: ""
 };
@@ -35,7 +36,38 @@ function cardHTML(p, i) {
     '</article>';
 }
 
-/* Point every form at the endpoint, set the thank-you page, and check photo size */
+/* Build the Instagram message from what the customer filled in */
+function buildMessage(form) {
+  var lines = [form.getAttribute("data-intro") || "Hi The Subtle Side!", ""];
+  var d = new FormData(form), hasFiles = false;
+  d.forEach(function (v, k) {
+    if (k.charAt(0) === "_" ) return;
+    if (k === "attachment") { if (v && v.size) hasFiles = true; return; }
+    v = String(v).trim();
+    if (v) lines.push(k.charAt(0).toUpperCase() + k.slice(1) + ": " + v);
+  });
+  if (hasFiles) lines.push("", "(I've attached photos in the website form too.)");
+  return lines.join("\n");
+}
+
+function igLink(msg) {
+  return "https://ig.me/m/" + CONFIG.INSTAGRAM + (msg ? "?text=" + encodeURIComponent(msg) : "");
+}
+
+function copyText(t) {
+  try { if (navigator.clipboard) return navigator.clipboard.writeText(t); } catch (e) {}
+  return Promise.reject();
+}
+
+function toast(t) {
+  var el = document.createElement("div");
+  el.className = "toast"; el.setAttribute("role", "status"); el.textContent = t;
+  document.body.appendChild(el);
+  setTimeout(function () { el.remove(); }, 3500);
+}
+
+/* On send: open Instagram with the message typed in, copy it as a backup,
+   then submit the form so the order (and any photos) is also emailed to you */
 function setupForms() {
   var thanks = new URL("thanks.html", location.href).href;
   document.querySelectorAll("form[data-endpoint]").forEach(function (form) {
@@ -53,10 +85,29 @@ function setupForms() {
           return;
         }
       }
+      var msg = buildMessage(form);
+      try { sessionStorage.setItem("tss-msg", msg); } catch (err) {}
+      copyText(msg).catch(function () {});
+      window.open(igLink(msg), "_blank", "noopener");
       var btn = form.querySelector("button[type=submit]");
-      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      if (btn) { btn.disabled = true; btn.lastChild.textContent = "Sending…"; }
     });
   });
+
+  // Thank-you page: reopen Instagram / copy the message again
+  var again = document.getElementById("ig-again");
+  if (again) {
+    var saved = null;
+    try { saved = sessionStorage.getItem("tss-msg"); } catch (err) {}
+    if (saved) {
+      again.href = igLink(saved);
+      var copyBtn = document.getElementById("copy-again");
+      copyBtn.hidden = false;
+      copyBtn.addEventListener("click", function () {
+        copyText(saved).then(function () { toast("Copied! Paste it in our Instagram chat."); }, function () { toast("Couldn't copy. Please type your message in the chat."); });
+      });
+    }
+  }
 }
 
 /* ---------- Order dialog (shared by home + shop) ---------- */

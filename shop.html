@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div class="bar">Tap Order on anything you like · We confirm the details with you on WhatsApp</div>
+<div class="bar">Tap Order on anything you like · We confirm the details with you on Instagram</div>
 
 <header class="site">
   <a class="brand" href="index.html"><img class="logo-img" src="images/logo/tss-logo.png" alt=""><b>The Subtle Side</b></a>
@@ -25,7 +25,7 @@
       <li><a href="about.html">About us</a></li>
       <li class="has-sub">
         <button type="button" class="sub-toggle is-current" aria-expanded="false" aria-controls="shop-sub">Shop <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-        <ul id="shop-sub" class="sub">
+        <ul id="shop-sub" class="submenu">
           <li><a href="shop.html" aria-current="page">All products</a></li>
           <li><a href="custom.html">Make it yours</a></li>
           <li><a href="help.html">No idea what to gift?</a></li>
@@ -74,21 +74,22 @@
     <div><h2 id="od-name">Product</h2><p id="od-cat"></p></div>
     <button type="button" class="od-close" data-close aria-label="Close">×</button>
   </div>
-  <form method="POST" enctype="multipart/form-data" data-endpoint>
+  <form method="POST" enctype="multipart/form-data" data-endpoint data-intro="Hi The Subtle Side! I'd like to order:">
     <input type="hidden" name="_subject" value="New order – The Subtle Side website">
     <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_next" value="" data-next>
     <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
     <input type="hidden" name="Product" id="od-product">
     <label class="f">Your name<input name="Name" type="text" required autocomplete="name"></label>
-    <label class="f">Your WhatsApp number<input name="WhatsApp" type="tel" required placeholder="+91" autocomplete="tel"></label>
+    <label class="f">WhatsApp number (optional)<input name="WhatsApp" type="tel" placeholder="+91" autocomplete="tel"></label>
     <label class="f">City<input name="City" type="text" required></label>
     <label class="f">Quantity<input name="Quantity" type="number" min="1" value="1"></label>
     <label class="f">Email (optional)<input name="email" type="email" autocomplete="email"></label>
     <label class="f">Needed by (optional)<input name="Needed by" type="date"></label>
     <label class="f full">Personalisation (optional)<textarea name="Personalisation" rows="3" placeholder="Names, initials, colours…"></textarea></label>
-    <p class="od-info">We'll message you on WhatsApp to confirm the details and price before you pay.</p>
-    <button class="btn block full" type="submit">Send my order</button>
+    <p class="od-info">Instagram opens with your order typed in. Just tap Send, and we'll confirm the details and price there.</p>
+    <button class="btn block full ig-btn" type="submit"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Send on Instagram</button>
   </form>
 </dialog>
 

@@ -289,9 +289,9 @@ nav.main .menu a[aria-current="page"],nav.main .sub-toggle.is-current{text-decor
 nav.main .sub-toggle svg{transition:transform .15s ease}
 nav.main .sub-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
 .has-sub{position:relative}
-.sub{list-style:none;margin:0;padding:8px;position:absolute;top:calc(100% + 6px);left:0;min-width:240px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 40px rgba(38,48,42,.14);display:none;z-index:40}
-.sub.open{display:block}
-.sub a{width:100%;border-radius:12px !important;box-sizing:border-box}
+.submenu{list-style:none;margin:0;padding:8px;position:absolute;top:calc(100% + 6px);left:0;min-width:240px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 40px rgba(38,48,42,.14);display:none;z-index:40}
+.submenu.open{display:block}
+.submenu a{width:100%;border-radius:12px !important;box-sizing:border-box}
 .menu-toggle{display:none;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:2px solid var(--green);background:#fff;color:var(--green);font:inherit;font-weight:800;cursor:pointer}
 @media (max-width:980px){
   .menu-toggle{display:inline-flex}
@@ -299,7 +299,7 @@ nav.main .sub-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
   nav.main .menu{display:none;flex-direction:column;align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:18px;padding:8px;margin-top:8px}
   nav.main .menu.open{display:flex}
   nav.main .menu a,nav.main .sub-toggle{width:100%;justify-content:space-between;border-radius:12px}
-  .sub{position:static;box-shadow:none;border:0;padding:0 0 0 14px;min-width:0}
+  .submenu{position:static;box-shadow:none;border:0;padding:0 0 0 14px;min-width:0}
 }
 .path p{min-height:calc(2 * 1.55em)}
 .nudge-line{margin:8px 0 0;color:var(--muted);font-size:17px}
@@ -331,3 +331,7 @@ nav.main .sub-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
   .menu-toggle{padding:0 12px}
   .menu-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 }
+
+.ig-btn{gap:10px}
+.ig-btn svg{flex:none}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:14px 22px;border-radius:14px;font-weight:700;z-index:100;box-shadow:0 10px 24px rgba(0,0,0,.25)}
