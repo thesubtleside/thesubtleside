@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shop – The Subtle Side</title>
-<meta name="description" content="Ready-to-order handmade clay jewellery, food miniatures, keychains, magnets and home decor, with small personal touches. Prices shown upfront.">
+<title>Charms – The Subtle Side</title>
+<meta name="description" content="Handmade clay charms: pick a design, then have it made as earrings, a necklace, keychain, phone charm, shoe charm, fridge magnet, bookmark or lapel pin.">
 <link rel="icon" href="images/logo/tss-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -13,8 +13,7 @@
 <script src="site.js" defer></script>
 </head>
 <body>
-
-<div class="bar">Tap Order on anything you like · We confirm the details with you on Instagram</div>
+<div class="bar">Pick a charm · Choose what it becomes · We confirm the details with you</div>
 
 <header class="site">
   <a class="brand" href="index.html"><img class="logo-img" src="images/logo/tss-logo.png" alt=""><b>The Subtle Side</b></a>
@@ -23,75 +22,82 @@
     <ul id="site-menu" class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About us</a></li>
-      <li class="has-sub">
-        <button type="button" class="sub-toggle is-current" aria-expanded="false" aria-controls="shop-sub">Shop <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-        <ul id="shop-sub" class="submenu">
-          <li><a href="shop.html" aria-current="page">All products</a></li>
-          <li><a href="custom.html">Make it yours</a></li>
-          <li><a href="help.html">No idea what to gift?</a></li>
-        </ul>
-      </li>
-      <li><a href="how.html">How it works</a></li>
-      <li><a href="business.html">For businesses</a></li>
-      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="shop.html" aria-current="page">Shop</a></li>
+      <li><a href="custom.html">Customise</a></li>
+      <li><a href="help.html">Still deciding</a></li>
     </ul>
   </nav>
 </header>
 
 <main class="wrap" style="padding-bottom:80px">
   <section class="page-hero" style="padding-left:0;padding-right:0">
-    <span class="chip">01 · You know what you want</span>
-    <h1 id="shop-title">Shop</h1>
-    <p class="sub">Pieces we've made before, handmade fresh for your order. Add small touches like names, initials or colours when you order.</p>
+    <h1>Charms</h1>
+    <p class="sub">Pick a charm, then pick what you'd like it as.</p>
+    <p class="types-line"><span class="types-lbl">Every charm can be made as</span> earrings, a necklace, keychain or bag tag, phone charm, shoe charm, fridge magnet, bookmark or lapel pin.</p>
   </section>
-  <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
+
+  <section class="most" aria-labelledby="most-h">
+    <h2 id="most-h" class="sec">Most wanted</h2>
+    <p>The charms everyone keeps asking for.</p>
+    <div id="most-row" class="most-row"></div>
+  </section>
+
+  <h2 class="theme-head">All charms</h2>
+  <div id="chips" class="chips" role="group" aria-label="Filter by theme"></div>
   <div id="shop-grid" class="pgrid"></div>
 
   <div class="nudge-card">
     <div>
-      <h2>Want something made from your photos?</h2>
-      <p>Portraits, pets, vehicles and more, made to look just like yours.</p>
+      <h2>Want a charm of something else?</h2>
+      <p>Send us a photo of their pet, their favourite dish or anything they love.</p>
     </div>
-    <a class="btn" href="custom.html">Make it yours</a>
+    <a class="btn" href="custom.html">Customise</a>
   </div>
 </main>
+
+<dialog id="order-dialog" class="order" aria-labelledby="od-name">
+  <div class="od-head">
+    <img id="od-img" src="images/logo/tss-logo.png" alt="">
+    <div><h2 id="od-name">Charm</h2><p id="od-cat"></p></div>
+    <button type="button" class="od-close" data-close aria-label="Close">×</button>
+  </div>
+  <form class="wiz in-dialog" method="POST" enctype="multipart/form-data" data-intro="Hi The Subtle Side! I'd like to order a charm:">
+  <input type="hidden" name="_subject" value="New charm order – The Subtle Side website">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="">
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <input type="hidden" name="Charm">
+  <ol class="wprog" aria-label="Steps"><li>Product type</li><li>Personalise</li><li>Contact</li></ol>
+  <div class="wstep">
+    <h2 class="wtitle">What should we make it as?</h2>
+    <div id="type-list" class="opts" role="radiogroup" aria-label="Product type"></div>
+    <input type="hidden" name="Price">
+    <div class="wnav"><button type="button" class="btn small" data-go="next">Next</button></div>
+  </div>
+  <div class="wstep" hidden>
+    <h2 class="wtitle">Personalise it (optional)</h2>
+    <label class="f full">Name / colour / size etc.<textarea name="Personalisation" rows="3" placeholder="e.g. Pink frosting, the name 'Riya' on the back"></textarea></label>
+    <label class="f">Quantity<input name="Quantity" type="number" min="1" value="1"></label>
+    <label class="f">Needed by (optional)<input name="Needed by" type="date"></label>
+    <div class="wnav"><button type="button" class="btn ghost small" data-go="back">Back</button><button type="button" class="btn small" data-go="next">Next</button></div>
+  </div>
+  <div class="wstep" data-contact hidden></div>
+  </form>
+</dialog>
 
 <footer class="site">
   <div class="wrap">
     <div class="cols">
-      <div style="flex:1 1 280px"><div class="display" style="font-weight:800;font-size:24px;color:#fff">The Subtle Side</div><span style="max-width:340px">Where memories come alive in clay. Handmade in India since 2020.</span></div>
-      <div><span class="t">Find a gift</span><a href="shop.html">All products</a><a href="custom.html">Make it yours</a><a href="help.html">No idea what to gift?</a><a href="business.html">For businesses</a></div>
-      <div><span class="t">Help</span><a href="how.html">How it works</a><a href="faq.html">FAQs</a><a href="policies.html#shipping">Shipping &amp; delivery</a><a href="policies.html#refunds">Refunds &amp; cancellations</a><a href="policies.html#terms">Terms &amp; privacy</a></div>
+      <div style="flex:1 1 260px"><div class="display" style="font-weight:800;font-size:24px;color:#fff">The Subtle Side</div><span style="max-width:340px">Where memories come alive in clay. Handmade in India since 2020.</span></div>
+      <div><span class="t">Shop</span><a href="shop.html">Charms</a><a href="figurines.html">Figurines &amp; portraits</a><a href="decor.html">Home décor</a><a href="business.html">For businesses</a></div>
+      <div><span class="t">Order</span><a href="custom.html">Customise</a><a href="help.html">Help me decide</a><a href="how.html">How it works</a><a href="faq.html">FAQs</a></div>
+      <div><span class="t">Help</span><a href="policies.html#shipping">Shipping &amp; delivery</a><a href="policies.html#refunds">Refunds &amp; cancellations</a><a href="policies.html#terms">Terms &amp; privacy</a></div>
       <div><span class="t">Say hello</span><a href="about.html">About us</a><a href="https://www.instagram.com/thesubtle.side/">Instagram @thesubtle.side</a><a href="mailto:thesubtleside@gmail.com">thesubtleside@gmail.com</a></div>
     </div>
     <div class="copy">© 2026 The Subtle Side · Shipping pan-India</div>
   </div>
 </footer>
-
-<dialog id="order-dialog" class="order" aria-labelledby="od-name">
-  <div class="od-head">
-    <img id="od-img" src="images/logo/tss-logo.png" alt="">
-    <div><h2 id="od-name">Product</h2><p id="od-cat"></p></div>
-    <button type="button" class="od-close" data-close aria-label="Close">×</button>
-  </div>
-  <form method="POST" enctype="multipart/form-data" data-endpoint data-intro="Hi The Subtle Side! I'd like to order:">
-    <input type="hidden" name="_subject" value="New order – The Subtle Side website">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="" data-next>
-    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-    <input type="hidden" name="Product" id="od-product">
-    <label class="f">Your name<input name="Name" type="text" required autocomplete="name"></label>
-    <label class="f">WhatsApp number (optional)<input name="WhatsApp" type="tel" placeholder="+91" autocomplete="tel"></label>
-    <label class="f">City<input name="City" type="text" required></label>
-    <label class="f">Quantity<input name="Quantity" type="number" min="1" value="1"></label>
-    <label class="f">Email (optional)<input name="email" type="email" autocomplete="email"></label>
-    <label class="f">Needed by (optional)<input name="Needed by" type="date"></label>
-    <label class="f full">Personalisation (optional)<textarea name="Personalisation" rows="3" placeholder="Names, initials, colours…"></textarea></label>
-    <p class="od-info">We'll copy your order and open our Instagram chat. Just paste and send, and we'll confirm the details and price there.</p>
-    <button class="btn block full ig-btn" type="submit"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Send on Instagram</button>
-  </form>
-</dialog>
 
 <a href="#" class="to-top" aria-label="Back to top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></a>
 
